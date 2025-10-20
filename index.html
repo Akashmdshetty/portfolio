@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Akash M D — Portfolio</title>
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="assets/css/style.css" />
+
+  <!-- Meta -->
+  <meta name="description" content="Akash M D — Entry-Level Programmer. AI/ML student building web apps and tools." />
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="wrap">
+      <div class="brand">
+        <h1>Akash M D</h1>
+        <p class="tag">Entry-Level Programmer | Passionate About Problem Solving</p>
+      </div>
+      <nav class="top-nav">
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero -->
+    <section class="hero" id="home">
+      <div class="wrap">
+        <div class="hero-content">
+          <h2>Turning ideas into AI-driven web apps</h2>
+          <p class="lead">
+            Motivated entry-level programmer with strong problem-solving skills, a foundation in Python and C,
+            and a passion for web development. Eager to apply academic knowledge to real-world software projects.
+          </p>
+          <div class="hero-cta">
+            <a class="btn" href="#projects">View Projects</a>
+            <a class="btn ghost" href="#contact">Contact</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About -->
+    <section class="section" id="about">
+      <div class="wrap grid about-grid">
+        <div class="card">
+          <h3>Profile</h3>
+          <p>
+            Motivated entry-level programmer with strong problem-solving skills, a foundation in Python and C
+            programming, and a passion for web development. Eager to apply academic knowledge to real-world
+            software projects.
+          </p>
+        </div>
+
+        <div class="card">
+          <h3>Education</h3>
+          <p><strong>Bachelor of Engineering</strong> — Artificial Intelligence & Machine Learning</p>
+          <p>Navkis College of Engineering — Expected Graduation: 2027</p>
+        </div>
+
+        <div class="card">
+          <h3>Skills</h3>
+          <ul class="skills">
+            <li>Python (Basic)</li>
+            <li>C Programming (Basic)</li>
+            <li>HTML & CSS (Basic)</li>
+            <li>Problem Solving, Data Structures (Basic)</li>
+            <li>AI Tools for Code Assistance</li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <h3>Certifications</h3>
+          <p>Completed a 6-day training program on Robotic Process Automation (RPA)</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects -->
+    <section class="section section-dark" id="projects">
+      <div class="wrap">
+        <h2 class="section-title">Projects</h2>
+
+        <div class="projects-grid">
+          <!-- Project 1 -->
+          <article class="project-card">
+            <div class="project-header">
+              <h3>AI Health Recipe Generator</h3>
+              <p class="muted">AI-powered web app that suggests healthy recipes based on ingredients you have.</p>
+            </div>
+            <div class="project-body">
+              <ul>
+                <li>Flask-based web app that uses a generative model to propose dishes and generate recipes.</li>
+                <li>Clean, mobile-friendly UI with Markdown-to-HTML rendering for recipes.</li>
+              </ul>
+            </div>
+            <div class="project-actions">
+              <a class="btn small ghost" href="#" onclick="comingSoon(event)">Live Demo</a>
+              <a class="btn small" href="https://github.com/Akashmdshetty" target="_blank" rel="noopener">View Code</a>
+            </div>
+          </article>
+
+          <!-- Project 2 -->
+          <article class="project-card">
+            <div class="project-header">
+              <h3>Phishing Detector Dashboard</h3>
+              <p class="muted">Streamlit dashboard to detect phishing emails, suspicious URLs, and risky attachments.</p>
+            </div>
+            <div class="project-body">
+              <ul>
+                <li>Heuristic scoring, URL/file scanning, and IMAP-based email scanning support.</li>
+                <li>Plotly speedometer visualizations and exportable tables for analysis.</li>
+              </ul>
+            </div>
+            <div class="project-actions">
+              <a class="btn small ghost" href="#" onclick="comingSoon(event)">Live Demo</a>
+              <a class="btn small" href="https://github.com/Akashmdshetty" target="_blank" rel="noopener">View Code</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section class="section" id="contact">
+      <div class="wrap contact-wrap">
+        <div class="contact-card">
+          <h2>Contact</h2>
+          <p class="muted">Feel free to reach out — available for internships and entry-level roles.</p>
+          <ul class="contact-list">
+            <li><strong>Email:</strong> <a href="mailto:aakashdshetty@gmail.com">aakashdshetty@gmail.com</a></li>
+            <li><strong>Phone:</strong> <a href="tel:+919380344439">+91 93803 44439</a></li>
+            <li><strong>GitHub:</strong> <a href="https://github.com/Akashmdshetty" target="_blank" rel="noopener">github.com/Akashmdshetty</a></li>
+          </ul>
+        </div>
+
+        <div class="contact-card">
+          <h3>Quick CV</h3>
+          <p><strong>Profile:</strong> Motivated entry-level programmer with foundations in Python & C.</p>
+          <p><strong>Education:</strong> B.E. AI & ML — Navkis College of Engineering (2027)</p>
+          <p><strong>Availability:</strong> Internship / Entry-level roles.</p>
+          <a class="btn" href="mailto:aakashdshetty@gmail.com">Email Me</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <small>© <span id="year"></span> Akash M D — Built with practical focus for GitHub Pages</small>
+    </div>
+  </footer>
+
+  <script src="assets/js/script.js"></script>
+</body>
+</html>
