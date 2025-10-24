@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>Phishing Detector — Replica</title>
+  <link rel="stylesheet" href="../style.css">
+  <style>
+    .dash-wrap{max-width:1100px;margin:18px auto}
+    .tabs{display:flex;gap:8px;margin-bottom:12px}
+    .tab{padding:8px 14px;border-radius:10px;background:linear-gradient(90deg,#7dd3fc,#7c3aed);color:#06121a;font-weight:700;cursor:pointer}
+    .panel{background:white;padding:14px;border-radius:12px;box-shadow:0 12px 30px rgba(0,0,0,0.06)}
+    .input-inline{display:flex;gap:10px;align-items:center}
+    .input-inline input{flex:1;padding:10px;border-radius:8px;border:1px solid #eee}
+    .result-row{display:flex;gap:12px;flex-wrap:wrap;margin-top:12px}
+    .meter{flex:1;min-width:220px;background:linear-gradient(180deg,#f8f9fa,#fff);padding:12px;border-radius:10px;text-align:center}
+    .danger{color:#b00020;font-weight:700}
+    .safebadge{padding:6px 10px;border-radius:999px;background:#d4edda;color:#155724;display:inline-block;font-weight:700}
+  </style>
+</head>
+<body>
+  <div class="wrap dash-wrap">
+    <a href="../index.html" class="btn small ghost">← Back to Portfolio</a>
+    <h1 style="margin-top:12px">Phishing Detector Dashboard — Replica</h1>
+    <p class="muted-small">This is a static, interactive replica that mimics the look and feel of the Streamlit app.</p>
+
+    <div class="panel">
+      <div class="tabs">
+        <div class="tab" data-tab="home">Home</div>
+        <div class="tab" data-tab="url">URL/File Scanner</div>
+        <div class="tab" data-tab="email">Email Scanner</div>
+      </div>
+
+      <div id="home" class="tab-panel">
+        <p>Detect phishing emails, URLs, and suspicious files. Use the tabs to try simulated scans.</p>
+      </div>
+
+      <div id="url" class="tab-panel" style="display:none">
+        <div class="input-inline">
+          <input id="urlInput" placeholder="Enter URL or paste text to scan">
+          <button id="scanUrlBtn" class="btn small">Scan</button>
+        </div>
+        <div id="urlResults" class="result-row"></div>
+      </div>
+
+      <div id="email" class="tab-panel" style="display:none">
+        <div class="input-inline">
+          <input id="emailInput" placeholder="Paste raw email text (or subject) to scan">
+          <button id="scanEmailBtn" class="btn small">Scan Email</button>
+        </div>
+        <div id="emailResults" class="result-row"></div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // tab switching
+    document.querySelectorAll('.tab').forEach(t=>{
+      t.addEventListener('click', ()=>{
+        document.querySelectorAll('.tab-panel').forEach(p=>p.style.display='none');
+        document.getElementById(t.dataset.tab).style.display='block';
+      });
+    });
+
+    function fakeScoreFromText(text){
+      const s = (text || "").toLowerCase();
+      let score = 0;
+      const keys = ["login","verify","account","password","urgent","click","bank","alert","confirm","update"];
+      keys.forEach(k=>{ if(s.includes(k)) score += 2; });
+      if(s.includes("http://")) score += 2;
+      if(/\d{1,3}(\.\d{1,3}){3}/.test(s)) score += 3;
+      return Math.min(score,10);
+    }
+
+    function labelFromScore(score){
+      if(score < 3) return {label:'Safe', cls:'safebadge'};
+      if(score < 6) return {label:'Suspicious', cls:'danger'};
+      return {label:'Phishing', cls:'danger'};
+    }
+
+    document.getElementById('scanUrlBtn').addEventListener('click', ()=>{
+      const t = document.getElementById('urlInput').value;
+      const score = fakeScoreFromText(t);
+      const meta = labelFromScore(score);
+      const out = document.createElement('div');
+      out.className = 'meter';
+      out.innerHTML = `<h4>Result: <span class="${meta.cls}">${meta.label}</span></h4>
+        <p>Score: <strong>${score}</strong> (0–10)</p>
+        <p class="muted-small">${t ? t : 'No input provided'}</p>
+        <p class="muted-small">Reasons: ${score>0 ? 'Suspicious keywords detected' : 'None detected'}</p>`;
+      const container = document.getElementById('urlResults');
+      container.prepend(out);
+    });
+
+    document.getElementById('scanEmailBtn').addEventListener('click', ()=>{
+      const t = document.getElementById('emailInput').value;
+      const score = fakeScoreFromText(t);
+      const meta = labelFromScore(score);
+      const out = document.createElement('div');
+      out.className = 'meter';
+      out.innerHTML = `<h4>Label: <span class="${meta.cls}">${meta.label}</span></h4>
+        <p>Score: <strong>${score}</strong></p>
+        <p class="muted-small">Preview: ${t ? (t.substring(0,200)+'...') : 'No input'}</p>
+        <p class="muted-small">Reasons: ${score>0 ? 'Keywords, suspicious pattern' : 'None detected'}</p>`;
+      const container = document.getElementById('emailResults');
+      container.prepend(out);
+    });
+
+    // init show home
+    document.querySelector('.tab[data-tab="home"]').click();
+  </script>
+</body>
+</html>
