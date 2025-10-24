@@ -1,61 +1,128 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Akash M D | Portfolio</title>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>Akash M D — Portfolio</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header>
-    <h1>Akash M D</h1>
-    <p>Entry-Level Programmer | Passionate About Problem Solving</p>
+  <div class="bg-anim">
+    <div class="blob b1"></div>
+    <div class="blob b2"></div>
+    <div class="blob b3"></div>
+    <div class="blob b4"></div>
+  </div>
+
+  <header class="top">
+    <div class="wrap">
+      <div class="brand">
+        <h1>Akash M D</h1>
+        <p class="subtitle">Entry-Level Programmer — Passionate About Problem Solving</p>
+      </div>
+      <nav class="nav">
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
   </header>
 
-  <section class="about">
-    <h2>About Me</h2>
-    <p>Motivated entry-level programmer with strong problem-solving skills, a foundation in Python and C programming, and a passion for web development. Eager to apply academic knowledge to real-world software projects.</p>
-  </section>
+  <main class="wrap main-content">
+    <section id="hero" class="card hero-card">
+      <div class="hero-left">
+        <h2 class="hero-title">Turning ideas into AI-driven web apps</h2>
+        <p class="lead">Motivated entry-level programmer with strong problem-solving skills, a foundation in Python and C programming, and a passion for web development. Eager to apply academic knowledge to real-world software projects.</p>
+        <div class="cta-row">
+          <a class="btn primary" href="#projects">View Projects</a>
+          <a class="btn ghost" href="#contact">Contact</a>
+        </div>
+      </div>
+      <div class="hero-right">
+        <div class="info-card">
+          <h3>Snapshot</h3>
+          <p><strong>Education:</strong> B.E. AI & ML — Navkis College of Engineering (Exp. 2027)</p>
+          <p><strong>Skills:</strong> Python, C, HTML, CSS, Problem Solving, Data Structures</p>
+          <p class="muted">Email: <a href="mailto:aakashdshetty@gmail.com">aakashdshetty@gmail.com</a></p>
+          <p class="muted">Phone: <a href="tel:+919380344439">+91 93803 44439</a></p>
+          <p class="muted">GitHub: <a href="https://github.com/akashmdshetty" target="_blank">github.com/akashmdshetty</a></p>
+        </div>
+      </div>
+    </section>
 
-  <section class="details">
-    <h2>Contact</h2>
-    <ul>
-      <li>Email: <a href="mailto:aakashdshetty@gmail.com">aakashdshetty@gmail.com</a></li>
-      <li>Phone: 9380344439</li>
-      <li>GitHub: <a href="https://github.com/akashmdshetty" target="_blank">github.com/akashmdshetty</a></li>
-    </ul>
-  </section>
+    <section id="about" class="card section-card">
+      <h2>About Me</h2>
+      <p>Motivated entry-level programmer with strong problem-solving skills, a foundation in Python and C programming, and a passion for web development. Eager to apply academic knowledge to real-world software projects.</p>
 
-  <section class="education">
-    <h2>Education</h2>
-    <p><strong>Bachelor of Engineering in Artificial Intelligence & Machine Learning</strong><br>
-       Navkis College of Engineering - Expected Graduation: 2027</p>
-  </section>
+      <div class="grid-2">
+        <div>
+          <h4>Education</h4>
+          <p><strong>Bachelor of Engineering</strong> — Artificial Intelligence & Machine Learning<br>Navkis College of Engineering — Expected Graduation: 2027</p>
+          <h4>Certifications</h4>
+          <p>6-day training program on Robotic Process Automation (RPA)</p>
+        </div>
 
-  <section class="skills">
-    <h2>Skills</h2>
-    <ul>
-      <li>Python (Basic), C Programming (Basic)</li>
-      <li>HTML, CSS (Basic)</li>
-      <li>Problem Solving, Data Structures (Basic)</li>
-      <li>AI Tools for Code Assistance, Web Page Creation</li>
-    </ul>
-  </section>
+        <div>
+          <h4>Skills</h4>
+          <ul class="skills">
+            <li>Python (Basic)</li>
+            <li>C Programming (Basic)</li>
+            <li>HTML & CSS (Basic)</li>
+            <li>Problem Solving, Data Structures (Basic)</li>
+            <li>AI Tools for Code Assistance</li>
+          </ul>
+        </div>
+      </div>
+    </section>
 
-  <section class="projects">
-    <h2>Projects</h2>
-    <div class="project-list">
-      <a href="projects/recipe-app/index.html" class="project-card">
-        🍳 Recipe App
-      </a>
-      <a href="projects/phishing-detector/index.html" class="project-card">
-        🛡️ Phishing Detector
-      </a>
+    <section id="projects" class="card section-card">
+      <h2>Projects</h2>
+      <p class="muted">Click a project to open its interactive replica page (works entirely in the browser).</p>
+
+      <div class="projects-grid">
+        <article class="project">
+          <h3><a class="proj-link" href="projects/recipe.html">🍳 AI Health Recipe Generator</a></h3>
+          <p class="muted">Flask-based original — here is a static interactive replica that behaves like the app (generates dummy recipes).</p>
+          <div class="proj-cta">
+            <a href="projects/recipe.html" class="btn small">Open Project</a>
+            <a href="https://github.com/akashmdshetty" class="btn small ghost" target="_blank">View Code</a>
+          </div>
+        </article>
+
+        <article class="project">
+          <h3><a class="proj-link" href="projects/phishing.html">🛡️ Phishing Detection App</a></h3>
+          <p class="muted">Streamlit original — static dashboard replica simulates URL/file/email scanning with fake results and gauges.</p>
+          <div class="proj-cta">
+            <a href="projects/phishing.html" class="btn small">Open Project</a>
+            <a href="https://github.com/akashmdshetty" class="btn small ghost" target="_blank">View Code</a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section id="contact" class="card section-card">
+      <h2>Contact</h2>
+      <p>Available for internships and entry-level roles. I respond fastest via email.</p>
+      <p><strong>Email:</strong> <a href="mailto:aakashdshetty@gmail.com">aakashdshetty@gmail.com</a> &nbsp; • &nbsp; <strong>Phone:</strong> +91 93803 44439</p>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="wrap">
+      <small>© <span id="year"></span> Akash M D</small>
     </div>
-  </section>
-
-  <footer>
-    <p>© 2025 Akash M D | Built with ❤️ and HTML/CSS</p>
   </footer>
+
+  <script>
+    // set year and smooth anchor scroll
+    document.getElementById('year').textContent = new Date().getFullYear();
+    document.querySelectorAll('a[href^="#"]').forEach(a=>{
+      a.addEventListener('click', e=>{
+        e.preventDefault();
+        const t = document.querySelector(a.getAttribute('href'));
+        if(t) t.scrollIntoView({behavior:'smooth', block:'start'});
+      });
+    });
+  </script>
 </body>
 </html>
