@@ -170,11 +170,13 @@ export default function Portfolio() {
   const certificates = [
     { name: '6-day Training Program on RPA', issuer: 'Robotic Process Automation', year: '2024', icon: '🤖' },
     { name: 'B.E. AI & Machine Learning', issuer: 'Navkis College of Engineering', year: '2027 (Expected)', icon: '🎓' },
+    { name: 'Walmart Vriddhi Supplier Development Program', issuer: 'Walmart Vriddhi', year: '2024', icon: '🛒' },
   ];
 
   const experience = [
     { year: '2024', title: 'Student - AI & ML', company: 'Navkis College of Engineering' },
     { year: '2024', title: 'RPA Training Program', company: 'Robotic Process Automation' },
+    { year: '2024', title: 'Walmart Vriddhi Program', company: 'Walmart Vriddhi' },
   ];
 
   const filteredProjects = activeTab === 'all'
@@ -258,7 +260,7 @@ export default function Portfolio() {
             <div className="grid grid-cols-3 gap-8 max-w-3xl mx-auto mb-12">
               {[
                 { label: 'Expected Graduation', value: '2027' },
-                { label: 'Projects Completed', value: '3+' },
+                { label: 'Projects Completed', value: '2+' },
                 { label: 'Skills Learning', value: '6+' },
               ].map((stat, i) => (
                 <div
