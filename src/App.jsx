@@ -179,7 +179,6 @@ export default function Portfolio() {
   const experience = [
     { year: '2024', title: 'Student - AI & ML', company: 'Navkis College of Engineering' },
     { year: '2024', title: 'RPA Training Program', company: 'Robotic Process Automation' },
-    { year: '2024', title: 'Walmart Vriddhi Program', company: 'Walmart Vriddhi' },
   ];
 
   const filteredProjects = activeTab === 'all'
