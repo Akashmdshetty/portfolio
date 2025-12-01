@@ -168,9 +168,9 @@ export default function Portfolio() {
   ];
 
   const certificates = [
-    { name: '6-day Training Program on RPA', issuer: 'Robotic Process Automation', year: '2024', icon: '🤖' },
-    { name: 'B.E. AI & Machine Learning', issuer: 'Navkis College of Engineering', year: '2027 (Expected)', icon: '🎓' },
-    { name: 'Walmart Vriddhi Supplier Development Program', issuer: 'Walmart Vriddhi', year: '2024', icon: '🛒' },
+    { name: 'Participant Certificate - RPA Training', issuer: 'Robotic Process Automation', year: '2024', icon: '🤖', link: 'https://drive.google.com/file/d/1OE7_XB9Qz28qiUInzDWCdRIexNnySAzg/view?usp=drive_link' },
+    { name: 'B.E. AI & Machine Learning', issuer: 'Navkis College of Engineering', year: '2027 (Expected)', icon: '🎓', link: null },
+    { name: 'Walmart Vriddhi Supplier Development Program', issuer: 'Walmart Vriddhi', year: '2024', icon: '🛒', link: 'https://drive.google.com/file/d/18ScN13L9ZkMV8_HKgHpnkmScLQVmJJQk/view?usp=drive_link' },
   ];
 
   const experience = [
@@ -568,9 +568,21 @@ export default function Portfolio() {
                     </div>
 
                     <div className="flex-grow">
-                      <h3 className="text-2xl font-bold mb-2 group-hover:text-cyan-400 transition-colors">
-                        {cert.name}
-                      </h3>
+                      {cert.link ? (
+                        <a
+                          href={cert.link}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="text-2xl font-bold mb-2 group-hover:text-cyan-400 transition-colors inline-flex items-center gap-2 hover:underline"
+                        >
+                          {cert.name}
+                          <ExternalLink size={20} className="opacity-70" />
+                        </a>
+                      ) : (
+                        <h3 className="text-2xl font-bold mb-2 group-hover:text-cyan-400 transition-colors">
+                          {cert.name}
+                        </h3>
+                      )}
                       <p className="text-gray-400 text-lg">{cert.issuer}</p>
                     </div>
 
