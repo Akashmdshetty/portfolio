@@ -169,11 +169,11 @@ export default function Portfolio() {
 
   const certificates = [
     { name: 'B.E. AI & Machine Learning', issuer: 'Navkis College of Engineering', year: '2027 (Expected)', icon: '🎓', link: null },
-    { name: 'JP Morgan Software Engineering Job Simulation', issuer: 'JP Morgan Chase & Co.', year: '2024', icon: '💼', link: 'https://drive.google.com/file/d/18ScN13L9ZkMV8_HKgHpnkmScLQVmJJQk/view?usp=drive_link' },
-    { name: 'Walmart Software Engineering Job Simulation', issuer: 'Walmart', year: '2024', icon: '🛒', link: 'https://drive.google.com/file/d/1YtQNJxaIXrQQycZDxQiDkjvuWD4qFsX9/view?usp=drive_link' },
-    { name: 'Spoken Tutorial - Python', issuer: 'IIT Bombay', year: '2024', icon: '🐍', link: 'https://drive.google.com/file/d/1IAK80aMcVik5tqd_kNfJRKLnfJYeMa4P/view?usp=drive_link' },
-    { name: 'Spoken Tutorial - HTML', issuer: 'IIT Bombay', year: '2024', icon: '🌐', link: 'https://drive.google.com/file/d/1OE7_XB9Qz28qiUInzDWCdRIexNnySAzg/view?usp=drive_link' },
-    { name: 'Spoken Tutorial - CSS', issuer: 'IIT Bombay', year: '2024', icon: '🎨', link: 'https://drive.google.com/file/d/1O9hb2772DzRNk4U_Cf2oEkAa7vs1iVnG/view?usp=drive_link' },
+    { name: 'JP Morgan Software Engineering Job Simulation', issuer: 'JP Morgan Chase & Co.', year: '2025', icon: '💼', link: 'https://drive.google.com/file/d/18ScN13L9ZkMV8_HKgHpnkmScLQVmJJQk/view?usp=drive_link' },
+    { name: 'Walmart Software Engineering Job Simulation', issuer: 'Walmart', year: '2025', icon: '🛒', link: 'https://drive.google.com/file/d/1YtQNJxaIXrQQycZDxQiDkjvuWD4qFsX9/view?usp=drive_link' },
+    { name: 'Spoken Tutorial - Python', issuer: 'IIT Bombay', year: '2025', icon: '🐍', link: 'https://drive.google.com/file/d/1IAK80aMcVik5tqd_kNfJRKLnfJYeMa4P/view?usp=drive_link' },
+    { name: 'Spoken Tutorial - HTML', issuer: 'IIT Bombay', year: '2025', icon: '🌐', link: 'https://drive.google.com/file/d/1OE7_XB9Qz28qiUInzDWCdRIexNnySAzg/view?usp=drive_link' },
+    { name: 'Spoken Tutorial - CSS', issuer: 'IIT Bombay', year: '2025', icon: '🎨', link: 'https://drive.google.com/file/d/1O9hb2772DzRNk4U_Cf2oEkAa7vs1iVnG/view?usp=drive_link' },
   ];
 
   const experience = [
