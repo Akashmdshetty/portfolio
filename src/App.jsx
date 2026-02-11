@@ -146,6 +146,16 @@ export default function Portfolio() {
 
   const projects = [
     {
+      title: '🤝 ASDJ-collabrator',
+      description: 'A Collaborative SaaS Platform designed for workspace management and real-time team collaboration.',
+      tech: ['React', 'Vite', 'Tailwind', 'Render'],
+      link: 'https://asdj-workspace.onrender.com/',
+      category: 'Web',
+      image: '🤝',
+      gradient: 'from-purple-600 to-indigo-600',
+      external: true,
+    },
+    {
       title: '🛡️ Phishing Detection App',
       description: 'A dashboard-style static replica simulating URL and email phishing detection with example outputs.',
       tech: ['Python', 'Machine Learning', 'Streamlit'],
