@@ -272,7 +272,7 @@ export default function Portfolio() {
             <div className="grid grid-cols-3 gap-8 max-w-3xl mx-auto mb-12">
               {[
                 { label: 'Expected Graduation', value: '2027' },
-                { label: 'Projects Completed', value: '2+' },
+                { label: 'Projects Completed', value: '3+' },
                 { label: 'Skills Learning', value: '6+' },
               ].map((stat, i) => (
                 <div
