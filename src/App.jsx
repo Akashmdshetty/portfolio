@@ -146,6 +146,16 @@ export default function Portfolio() {
 
   const projects = [
     {
+      title: '🏛️ ARCHAEOLIS',
+      description: 'An AI-driven archaeological site mapping platform that discovers hidden ruins buried beneath centuries of vegetation and soil using advanced neural networks and high-resolution satellite imagery.',
+      tech: ['Python', 'PyTorch', 'YOLOv8', 'U-Net++', 'Streamlit'],
+      link: 'https://archaeolis-3539.streamlit.app/',
+      category: 'AI',
+      image: '🏛️',
+      gradient: 'from-emerald-600 to-teal-600',
+      external: true,
+    },
+    {
       title: '🤝 ASDJ-collabrator',
       description: 'A Collaborative SaaS Platform designed for workspace management and real-time team collaboration.',
       tech: ['React', 'Vite', 'Tailwind', 'Render'],
@@ -173,16 +183,6 @@ export default function Portfolio() {
       category: 'Blockchain',
       image: '🚀',
       gradient: 'from-cyan-600 to-blue-600',
-      external: true,
-    },
-    {
-      title: '🏛️ ARCHAEOLIS',
-      description: 'An AI-driven archaeological site mapping platform that discovers hidden ruins buried beneath centuries of vegetation and soil using advanced neural networks and high-resolution satellite imagery.',
-      tech: ['Python', 'PyTorch', 'YOLOv8', 'U-Net++', 'Streamlit'],
-      link: 'https://archaeolis-3539.streamlit.app/',
-      category: 'AI',
-      image: '🏛️',
-      gradient: 'from-emerald-600 to-teal-600',
       external: true,
     },
   ];
