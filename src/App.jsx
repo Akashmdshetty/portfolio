@@ -175,6 +175,16 @@ export default function Portfolio() {
       gradient: 'from-cyan-600 to-blue-600',
       external: true,
     },
+    {
+      title: '🏛️ ARCHAEOLIS',
+      description: 'An AI-driven archaeological site mapping platform that discovers hidden ruins buried beneath centuries of vegetation and soil using advanced neural networks and high-resolution satellite imagery.',
+      tech: ['Python', 'PyTorch', 'YOLOv8', 'U-Net++', 'Streamlit'],
+      link: 'https://archaeolis-3539.streamlit.app/',
+      category: 'AI',
+      image: '🏛️',
+      gradient: 'from-emerald-600 to-teal-600',
+      external: true,
+    },
   ];
 
   const certificates = [
@@ -272,7 +282,7 @@ export default function Portfolio() {
             <div className="grid grid-cols-3 gap-8 max-w-3xl mx-auto mb-12">
               {[
                 { label: 'Expected Graduation', value: '2027' },
-                { label: 'Projects Completed', value: '3+' },
+                { label: 'Projects Completed', value: '4+' },
                 { label: 'Skills Learning', value: '6+' },
               ].map((stat, i) => (
                 <div
