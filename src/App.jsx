@@ -149,7 +149,7 @@ export default function Portfolio() {
       title: '🏛️ ARCHAEOLIS',
       description: 'An AI-driven archaeological site mapping platform that discovers hidden ruins buried beneath centuries of vegetation and soil using advanced neural networks and high-resolution satellite imagery.',
       tech: ['Python', 'PyTorch', 'YOLOv8', 'U-Net++', 'Streamlit'],
-      link: 'https://archaeolis-3539.streamlit.app/',
+      link: 'https://archaeolis-2026.streamlit.app/',
       category: 'AI',
       image: '🏛️',
       gradient: 'from-emerald-600 to-teal-600',
